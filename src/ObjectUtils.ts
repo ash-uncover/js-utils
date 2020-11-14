@@ -6,3 +6,7 @@ export const getProperty = (object: object, path: string) => {
     return undefined
   }, object)
 }
+
+export const clone = (object: object) => {
+  return JSON.parse(JSON.stringify(object))
+}
