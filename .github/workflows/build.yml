@@ -1,11 +1,17 @@
 name: checks
-on: [push]
+on:
+  pull_request:
+    branches: 
+      - main
+  push:
+    branches: 
+      - main
 jobs:
   build-project:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v2.3.4
+      - uses: actions/setup-node@@v2.1.2
 
       - name: install
         run: npm i
@@ -18,3 +24,7 @@ jobs:
 
       - name: build
         run: npm run build
+      
+      - name: publish
+        run: npm publish --access=public
+        if: github.event == 'push'
