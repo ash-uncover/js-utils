@@ -1,3 +1,3 @@
-# ap-util
+# js-utils
 
-ap-utils is a small JavaScript library with common stuff I use everywhere
+js-utils is a small JavaScript library with common stuff usefull in many places
