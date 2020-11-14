@@ -1,0 +1,43 @@
+name: PR-checks
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.3.4
+      - uses: actions/setup-node@v2.1.2
+
+      - name: install
+        run: npm i
+
+      - name: lint
+        run: npm run lint
+
+  check-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.3.4
+      - uses: actions/setup-node@v2.1.2
+
+      - name: install
+        run: npm i
+
+      - name: build
+        run: npm run build
+
+  check-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.3.4
+      - uses: actions/setup-node@v2.1.2
+
+      - name: install
+        run: npm i
+
+      - name: test
+        run: npm run test
