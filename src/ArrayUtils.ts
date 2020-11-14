@@ -1,4 +1,4 @@
-export const createIntArray = function (size: number = 0) {
+export const createIntArray = (size: number = 0) => {
   const result = []
   for (let i = 0; i < size; i++) {
     result.push(i)
@@ -6,7 +6,7 @@ export const createIntArray = function (size: number = 0) {
   return result
 }
 
-export const shuffle = function (array: any[] = []) {
+export const shuffle = (array: any[] = []) => {
   const source = ([] as any[]).concat(array)
   const result: any[] = []
   while (source.length) {
@@ -16,7 +16,7 @@ export const shuffle = function (array: any[] = []) {
   return result
 }
 
-export const randomSubArray = function (array: any[] = [], items: number = 0) {
+export const randomSubArray = (array: any[] = [], items: number = 0) => {
   const source = ([] as any[]).concat(array)
   const result: any[] = []
   for (let i = 0; i < items; i++) {

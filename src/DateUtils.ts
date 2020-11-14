@@ -25,7 +25,7 @@ export const TimeConstants = {
   MIL_PER_DAY
 }
 
-export const durationToHumanTime = function (duration: number) {
+export const durationToHumanTime = (duration: number) => {
   return {
     millis: duration % MIL_PER_SEC,
     seconds: Math.floor(duration / MIL_PER_SEC) % SEC_PER_MIN,
@@ -34,7 +34,7 @@ export const durationToHumanTime = function (duration: number) {
   }
 }
 
-export const normalizeTime = function (value: number) {
+export const normalizeTime = (value: number) => {
   return `${value}`.padStart(2, '0')
 }
 
