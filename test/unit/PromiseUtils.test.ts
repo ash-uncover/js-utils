@@ -14,7 +14,7 @@ describe('PromiseUtils', () => {
         .then((result) => {
           const endTime = Date.now()
           expect(result).toEqual(expected)
-          expect(endTime - initialTime).toBeGreaterThan(paramDelay)
+          expect(endTime - initialTime).toBeGreaterThanOrEqual(paramDelay)
           done()
         })
         .catch((error) => {
