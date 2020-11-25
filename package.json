@@ -1,6 +1,6 @@
 {
   "name": "@uncover/js-utils",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "author": "aSh <ash.uncover@gmail.com>",
   "description": "javascript utils",
   "license": "ISC",
@@ -24,6 +24,7 @@
     "test-coverage": "jest --collectCoverage",
     "version": "npm run format"
   },
+  "dependencies": {},
   "peerDependencies": {},
   "devDependencies": {
     "@types/jest": "latest",
@@ -34,6 +35,5 @@
     "tslint": "latest",
     "tslint-config-prettier": "latest",
     "typescript": "latest"
-  },
-  "dependencies": {}
+  }
 }

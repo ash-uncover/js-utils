@@ -36,4 +36,16 @@ describe('ObjectUtils', () => {
       expect(result).toBeUndefined()
     })
   })
+  describe('clone', () => {
+    test('a basic object', () => {
+      const paramObject = {
+        member3: 'value3',
+        member1: 'value1',
+        member2: 'value2',
+      }
+      const result = ObjectUtils.clone(paramObject)
+
+      expect(result).toEqual(paramObject)
+    })
+  })
 })
