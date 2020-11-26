@@ -1,10 +1,9 @@
 name: PR-checks
 
 on:
-  pull_request:
+  push:
     branches:
       - main
-      - master
 
 jobs:
   lint-build-test:
@@ -32,11 +31,8 @@ jobs:
       - name: install
         run: npm i
 
-      - name: lint
-        run: npm run lint
-
       - name: build
         run: npm run build
 
-      - name: test
-        run: npm run test-coverage
+      - name: publish
+        uses: JS-DevTools/npm-publish@v1
