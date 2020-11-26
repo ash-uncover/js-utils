@@ -1,4 +1,4 @@
-name: PR-checks
+name: PUSH-publish
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  lint-build-test:
+  build-publish:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout project
