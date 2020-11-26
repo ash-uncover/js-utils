@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout project
-        uses: actions/checkout@latest
+        uses: actions/checkout@master
 
       - name: Setup nodejs
-        uses: actions/setup-node@latest
+        uses: actions/setup-node@master
 
       - name: Cache node modules
         uses: actions/cache@v2
