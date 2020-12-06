@@ -2,6 +2,7 @@ import * as AlphabetBase from './Alphabet'
 import * as ArrayUtilsBase from './ArrayUtils'
 import * as DateUtilsBase from './DateUtils'
 import * as EncodeUtilsBase from './EncodeUtils'
+import * as FileUtilsBase from './FileUtils'
 import * as FunctionUtilsBase from './FunctionUtils'
 import * as HttpUtilsBase from './HttpUtils'
 import * as ObjectUtilsBase from './ObjectUtils'
@@ -15,6 +16,7 @@ export const Alphabet = AlphabetBase
 export const ArrayUtils = ArrayUtilsBase
 export const DateUtils = DateUtilsBase
 export const EncodeUtils = EncodeUtilsBase
+export const FileUtils = FileUtilsBase
 export const FunctionUtils = FunctionUtilsBase
 export const HttpUtils = HttpUtilsBase
 export const ObjectUtils = ObjectUtilsBase
