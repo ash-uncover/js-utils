@@ -1,12 +1,14 @@
 {
   "compilerOptions": {
     "allowJs": true,
+    "checkJs": true,
     "declaration": true,
-    "module": "commonjs",
+    "module": "ES6",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
     "outDir": "./dist",
     "strict": true,
-    "lib": ["es6", "dom"],
-    "target": "es5"
+    "target": "es5",
   },
   "include": [
     "src"

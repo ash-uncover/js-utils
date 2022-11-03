@@ -22,6 +22,27 @@ describe('StringUtils', () => {
     })
   })
 
+  describe('capitalizeFirst', () => {
+    test('With a lower case word', () => {
+      expect(StringUtils.capitalizeFirst('test')).toEqual('T')
+    })
+    test('With an upper case word', () => {
+      expect(StringUtils.capitalizeFirst('TEST')).toEqual('T')
+    })
+    test('With an mixed case word', () => {
+      expect(StringUtils.capitalizeFirst('tEsT')).toEqual('T')
+    })
+    test('With 1 letter string', () => {
+      expect(StringUtils.capitalizeFirst('a')).toEqual('A')
+    })
+    test('With an empty string', () => {
+      expect(StringUtils.capitalizeFirst('')).toEqual('')
+    })
+    test('With special chars', () => {
+      expect(StringUtils.capitalizeFirst('*/+-')).toEqual('*')
+    })
+  })
+
   describe('replaceAll', () => {
     test('Properly replace several occurrences', () => {
       const paramValue = 'bonjour test ca test bien'

@@ -5,6 +5,13 @@ export const capitalize = (value: string) => {
   return ''
 }
 
+export const capitalizeFirst = (value: string) => {
+  if (value.length) {
+    return value.substring(0, 1).toUpperCase()
+  }
+  return ''
+}
+
 export const replaceAll = (value: string, replacePattern: string, replaceWith: string) => {
   return value.split(replacePattern).join(replaceWith)
 }

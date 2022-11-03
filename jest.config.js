@@ -14,6 +14,11 @@ module.exports = {
   "transform": {
     '^.+\\.ts?$': 'ts-jest',
   },
+  "globals": {
+    "ts-jest": {
+      "useESM": true
+    }
+  },
   "collectCoverageFrom": [
     "src/**/*.js",
     "src/**/*.ts",

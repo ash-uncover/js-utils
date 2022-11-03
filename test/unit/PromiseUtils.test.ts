@@ -3,59 +3,51 @@ import { PromiseUtils } from '../../src'
 
 describe('PromiseUtils', () => {
   describe('delayedPromise', () => {
-    test('When Promise resolves with a delay', (done) => {
+    test('When Promise resolves with a delay', async () => {
       const expected = 'test'
-      const paramFn = new Promise ((resolve) => resolve(expected))
+      const paramFn = new Promise((resolve) => resolve(expected))
       const paramDelay = 100
 
       const initialTime = Date.now()
 
-      PromiseUtils.delayedPromise(paramFn, paramDelay)
+      return PromiseUtils.delayedPromise(paramFn, paramDelay)
         .then((result) => {
           const endTime = Date.now()
           expect(result).toEqual(expected)
           expect(endTime - initialTime).toBeGreaterThanOrEqual(paramDelay)
-          done()
         })
-        .catch((error) => {
-          done(error)
-        })
+
     })
 
-    test('When Promise resolves without delay', (done) => {
+    test('When Promise resolves without delay', async () => {
       const expected = 'test'
-      const paramFn = new Promise ((resolve) => resolve(expected))
+      const paramFn = new Promise((resolve) => resolve(expected))
       const enoughTime = 50
       const initialTime = Date.now()
 
-      PromiseUtils.delayedPromise(paramFn)
+      return PromiseUtils.delayedPromise(paramFn)
         .then((result) => {
           const endTime = Date.now()
           expect(result).toEqual(expected)
           expect(endTime - initialTime).toBeLessThan(enoughTime)
-          done()
-        })
-        .catch((error) => {
-          done(error)
         })
     })
 
-    test('When Promise rejects', (done) => {
+    test('When Promise rejects', async () => {
       const expected = 'testError'
-      const paramFn = new Promise ((resolve, reject) => reject(expected))
+      const paramFn = new Promise((resolve, reject) => reject(expected))
       const paramDelay = 100
 
       const initialTime = Date.now()
 
-      PromiseUtils.delayedPromise(paramFn, paramDelay)
+      return PromiseUtils.delayedPromise(paramFn, paramDelay)
         .then((result) => {
-          done('error')
+          expect(result).toBe('error')
         })
         .catch((error) => {
           const endTime = Date.now()
           expect(error).toEqual(expected)
           expect(endTime - initialTime).toBeLessThan(paramDelay)
-          done()
         })
     })
   })
