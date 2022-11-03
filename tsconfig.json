@@ -1,16 +1,16 @@
 {
   "compilerOptions": {
-    "allowJs": true,
     "baseUrl": ".",
-    "checkJs": true,
     "declaration": true,
     "esModuleInterop": true,
-    "lib": ["es6","DOM"],
     "module": "CommonJS",
     "noImplicitAny": true,
     "outDir": "./dist",
     "strict": true,
     "target": "es5",
+    "typeRoots": [
+      "node_modules/@types"
+    ]
   },
   "include": [
     "src"
