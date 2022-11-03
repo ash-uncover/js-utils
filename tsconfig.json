@@ -1,10 +1,12 @@
 {
   "compilerOptions": {
     "allowJs": true,
+    "baseUrl": ".",
     "checkJs": true,
     "declaration": true,
-    "module": "ES6",
-    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "lib": ["es6","DOM"],
+    "module": "CommonJS",
     "noImplicitAny": true,
     "outDir": "./dist",
     "strict": true,

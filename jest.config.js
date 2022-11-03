@@ -1,42 +1,65 @@
 module.exports = {
-  "modulePaths": [
-    "src",
-    "test"
+
+  roots: [
+
+    '<rootDir>/src',
+
+    '<rootDir>/test'
+
   ],
-  "moduleFileExtensions": [
-    'ts',
-    'tsx',
-    'js',
-    'jsx',
+
+  transform: {
+
+    '^.+\\.tsx?$': 'ts-jest'
+
+  },
+
+  collectCoverageFrom: [
+
+    'src/**/*.{ts,tsx,js,jsx}',
+
+    '!**/node_modules/**',
+
+    '!**/vendor/**',
+
+    '!**/index.ts',
+
+    '!**/index.tsx',
+
+    '!**/index.js',
+
+    '!**/index.jsx'
+
+  ],
+
+  coverageDirectory: 'test/__coverage__',
+
+  coverageThreshold: {
+
+    global: {
+
+      branches: 0,
+
+      functions: 0,
+
+      lines: 0,
+
+      statements: 0
+
+    }
+
+  },
+
+  coverageReporters: [
+
     'json',
-    'node'
-  ],
-  "transform": {
-    '^.+\\.ts?$': 'ts-jest',
-  },
-  "globals": {
-    "ts-jest": {
-      "useESM": true
-    }
-  },
-  "collectCoverageFrom": [
-    "src/**/*.js",
-    "src/**/*.ts",
-    "!**/node_modules/**"
-  ],
-  "coverageDirectory": "test/__coverage__",
-  "coverageThreshold": {
-    "global": {
-      "branches": 100,
-      "functions": 100,
-      "lines": 100,
-      "statements": 100
-    }
-  },
-  "coverageReporters": [
-    "json",
-    "lcov",
-    "text",
-    "text-summary"
+
+    'lcov',
+
+    'text',
+
+    'text-summary'
+
   ]
+
 }
