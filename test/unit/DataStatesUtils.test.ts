@@ -6,7 +6,7 @@ describe('DataStatesUtils', () => {
 
     test('when no states are sent ', () => {
       // Declaration
-      const states = []
+      const states: string[] = []
       // Execution
       const result = DataStatesUtils.mergeDataStates(states)
       // Asertion
@@ -16,7 +16,7 @@ describe('DataStatesUtils', () => {
 
     test('when one state is failure', () => {
       // Declaration
-      const states = [
+      const states: string[] = [
         DataStates.SUCCESS,
         DataStates.FETCHING,
         DataStates.FETCHING_FIRST,
@@ -33,7 +33,7 @@ describe('DataStatesUtils', () => {
 
     test('when one state is outdated', () => {
       // Declaration
-      const states = [
+      const states: string[] = [
         DataStates.SUCCESS,
         DataStates.FETCHING,
         DataStates.FETCHING_FIRST,
@@ -49,7 +49,7 @@ describe('DataStatesUtils', () => {
 
     test('when one state is never', () => {
       // Declaration
-      const states = [
+      const states: string[] = [
         DataStates.SUCCESS,
         DataStates.FETCHING,
         DataStates.FETCHING_FIRST,
@@ -64,7 +64,7 @@ describe('DataStatesUtils', () => {
 
     test('when one state is fetching first', () => {
       // Declaration
-      const states = [
+      const states: string[] = [
         DataStates.SUCCESS,
         DataStates.FETCHING,
         DataStates.FETCHING_FIRST,
@@ -78,7 +78,7 @@ describe('DataStatesUtils', () => {
 
     test('when one state is fetching', () => {
       // Declaration
-      const states = [
+      const states: string[] = [
         DataStates.SUCCESS,
         DataStates.FETCHING,
       ]
@@ -91,7 +91,7 @@ describe('DataStatesUtils', () => {
 
     test('when all states are success', () => {
       // Declaration
-      const states = [
+      const states: string[] = [
         DataStates.SUCCESS,
       ]
       // Execution
