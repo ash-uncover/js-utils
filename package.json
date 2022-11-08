@@ -1,9 +1,9 @@
 {
   "name": "@uncover/js-utils",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "author": "aSH <ash.uncover@gmail.com>",
   "description": "javascript utils",
-  "license": "ISC",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/ash-uncover/js-utils"
