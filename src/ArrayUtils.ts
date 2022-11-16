@@ -25,3 +25,12 @@ export const randomSubArray = (array: any[] = [], items: number = 0) => {
   }
   return result
 }
+
+export const removeElement = (array: any[], element: any) => {
+  const index = array.indexOf(element)
+  let result = array.slice()
+  if (index !== -1) {
+    result.splice(index, 1)
+  }
+  return result
+}
