@@ -6,9 +6,9 @@ export const createIntArray = (size: number = 0) => {
   return result
 }
 
-export const shuffle = (array: any[] = []) => {
-  const source = ([] as any[]).concat(array)
-  const result: any[] = []
+export const shuffle = <T>(array: T[] = []): T[] => {
+  const source = array.slice()
+  const result: T[] = []
   while (source.length) {
     const index = Math.floor(Math.random() * (source.length))
     result.push(source.splice(index, 1)[0])
@@ -16,9 +16,9 @@ export const shuffle = (array: any[] = []) => {
   return result
 }
 
-export const randomSubArray = (array: any[] = [], items: number = 0) => {
-  const source = ([] as any[]).concat(array)
-  const result: any[] = []
+export const randomSubArray = <T>(array: T[] = [], items: number = 0): T[] => {
+  const source = array.slice()
+  const result: T[] = []
   for (let i = 0; i < items; i++) {
     const index = Math.floor(Math.random() * (source.length))
     result.push(source.splice(index, 1)[0])
@@ -26,7 +26,7 @@ export const randomSubArray = (array: any[] = [], items: number = 0) => {
   return result
 }
 
-export const removeElement = (array: any[], element: any) => {
+export const removeElement = <T>(array: T[], element: any):T[] => {
   const index = array.indexOf(element)
   const result = array.slice()
   if (index !== -1) {
