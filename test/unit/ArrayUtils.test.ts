@@ -79,6 +79,28 @@ describe('ArrayUtils', () => {
     })
   })
 
+  // randomElement //
+
+  describe('randomElement', () => {
+
+    test('when no array is sent', () => {
+      // Declaration
+      // Execution
+      const result = ArrayUtils.randomElement()
+      // Assertion
+      expect(result).toBe(null)
+    })
+
+    test('when sent a valid array', () => {
+      // Declaration
+      const paramArray = [1, 2, 3]
+      // Execution
+      const result = ArrayUtils.randomElement(paramArray)
+      // Assertion
+      expect(result).not.toBe(null)
+    })
+  })
+
   // removeElement //
 
   describe('removeElement', () => {
