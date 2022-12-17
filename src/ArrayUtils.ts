@@ -26,6 +26,14 @@ export const randomSubArray = <T>(array: T[] = [], items: number = 0): T[] => {
   return result
 }
 
+export const randomElement = <T>(array: T[] = []): T | null => {
+  if (array.length) {
+    const index = Math.floor(Math.random() * (array.length))
+    return array[index]
+  }
+  return null
+}
+
 export const removeElement = <T>(array: T[], element: any):T[] => {
   const index = array.indexOf(element)
   const result = array.slice()
