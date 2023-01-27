@@ -10,3 +10,10 @@ export const getProperty = (object: object, path: string) => {
 export const clone = (object: object) => {
   return JSON.parse(JSON.stringify(object))
 }
+
+export const arrayfy = <T>(object: T | T[]): T[] => {
+  if (Array.isArray(object)) {
+    return object
+  }
+  return [object]
+}
