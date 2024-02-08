@@ -1,4 +1,4 @@
-import { FunctionUtils } from '../../src'
+import { FunctionUtils } from '.'
 
 describe('FunctionUtils', () => {
   describe('getParamNames', () => {

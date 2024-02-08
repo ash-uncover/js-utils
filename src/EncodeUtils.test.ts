@@ -1,4 +1,4 @@
-import { EncodeUtils } from '../../src'
+import { EncodeUtils } from '.'
 
 const DATA = {
   TOTO: {

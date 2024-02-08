@@ -1,4 +1,4 @@
-import { Sets } from '../../src'
+import { Sets } from '.'
 
 describe('Sets', () => {
 

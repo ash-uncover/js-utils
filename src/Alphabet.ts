@@ -1,4 +1,4 @@
-const ALPHABET = {
+export const Alphabet = {
   LETTERS: {
     A: 'a',
     B: 'b',
@@ -28,5 +28,3 @@ const ALPHABET = {
     Z: 'z'
   }
 }
-
-export default ALPHABET

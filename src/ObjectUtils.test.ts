@@ -1,6 +1,29 @@
-import { ObjectUtils } from '../../src'
+import { ObjectUtils } from '.'
 
 describe('ObjectUtils', () => {
+
+  // nil //
+
+  describe('nil', () => {
+
+    test('with no param', () => {
+      expect(ObjectUtils.nil()).toBe(true)
+    })
+
+    test('with undefined', () => {
+      const obj: any = {}
+      expect(ObjectUtils.nil(obj.data)).toBe(true)
+    })
+
+    test('with null', () => {
+      expect(ObjectUtils.nil(null)).toBe(true)
+    })
+
+    test('with value', () => {
+      const obj = {}
+      expect(ObjectUtils.nil('')).toBe(false)
+    })
+  })
 
   // getProperty //
 

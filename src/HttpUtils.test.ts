@@ -1,9 +1,13 @@
-import { HttpUtils } from '../../src'
+import {
+  HttpHeaders,
+  HttpMethods,
+  HttpStatuses
+} from '.'
 
 describe('HttpUtils', () => {
   describe('HttpHeader', () => {
     test('check members are defined', () => {
-      for (let header in HttpUtils.HttpHeader) {
+      for (let header in HttpHeaders) {
         expect(header).toBeDefined()
       }
     })
@@ -11,7 +15,7 @@ describe('HttpUtils', () => {
 
   describe('HttpMethod', () => {
     test('check members are defined', () => {
-      for (let method in HttpUtils.HttpMethod) {
+      for (let method in HttpMethods) {
         expect(method).toBeDefined()
       }
     })
@@ -19,7 +23,7 @@ describe('HttpUtils', () => {
 
   describe('HttpStatus', () => {
     test('check members are defined', () => {
-      for (let status in HttpUtils.HttpStatus) {
+      for (let status in HttpStatuses) {
         expect(status).toBeDefined()
       }
     })

@@ -1,4 +1,4 @@
-import { ArrayUtils } from '../../src'
+import { ArrayUtils } from '.'
 
 describe('ArrayUtils', () => {
 

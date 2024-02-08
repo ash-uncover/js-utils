@@ -1,4 +1,4 @@
-import { StringLabel } from '../../src'
+import { StringLabel } from '.'
 
 /* TEST CASES */
 

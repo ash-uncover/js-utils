@@ -1,19 +1,26 @@
-export const getProperty = (object: object, path: string) => {
-  return path.split('.').reduce((acc: any, element: string) => {
-    if (acc && typeof acc === 'object') {
-      return acc[element]
-    }
-    return undefined
-  }, object)
-}
+export class ObjectUtils {
 
-export const clone = (object: object) => {
-  return JSON.parse(JSON.stringify(object))
-}
-
-export const arrayfy = <T>(object: T | T[]): T[] => {
-  if (Array.isArray(object)) {
-    return object
+  static nil(object?: any) {
+    return typeof object === 'undefined' || object === null
   }
-  return [object]
+
+  static getProperty(object: object, path: string) {
+    return path.split('.').reduce((acc: any, element: string) => {
+      if (acc && typeof acc === 'object') {
+        return acc[element]
+      }
+      return undefined
+    }, object)
+  }
+
+  static clone(object: object) {
+    return JSON.parse(JSON.stringify(object))
+  }
+
+  static arrayfy<T>(object: T | T[]): T[] {
+    if (Array.isArray(object)) {
+      return object
+    }
+    return [object]
+  }
 }
