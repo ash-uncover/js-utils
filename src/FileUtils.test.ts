@@ -1,4 +1,4 @@
-import { FileUtils } from '../../src'
+import { FileUtils } from '.'
 
 describe('FileUtils', () => {
   describe('getExtension', () => {

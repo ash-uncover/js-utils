@@ -3,11 +3,14 @@
  */
 const STRIP_COMMENTS = /((\/\/.*$)|(\/\*[\s\S]*?\*\/))/mg
 const ARGUMENT_NAMES = /([^\s,]+)/g
-export const getParamNames = (func: any) => {
-  const fnStr = func.toString().replace(STRIP_COMMENTS, '')
-  const result = fnStr.slice(fnStr.indexOf('(')+1, fnStr.indexOf(')')).match(ARGUMENT_NAMES)
-  if (result === null) {
-    return []
+
+export class FunctionUtils {
+  static getParamNames(func: any) {
+    const fnStr = func.toString().replace(STRIP_COMMENTS, '')
+    const result = fnStr.slice(fnStr.indexOf('(') + 1, fnStr.indexOf(')')).match(ARGUMENT_NAMES)
+    if (result === null) {
+      return []
+    }
+    return result
   }
-  return result
 }

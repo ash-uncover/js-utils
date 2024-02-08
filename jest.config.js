@@ -1,7 +1,6 @@
 module.exports = {
   roots: [
-    '<rootDir>/src',
-    '<rootDir>/test'
+    '<rootDir>/src'
   ],
   transform: {
     '^.+\\.tsx?$': 'ts-jest'
@@ -15,7 +14,7 @@ module.exports = {
     '!**/index.js',
     '!**/index.jsx'
   ],
-  coverageDirectory: 'test/__coverage__',
+  coverageDirectory: '__coverage__',
   coverageThreshold: {
     global: {
       branches: 100,

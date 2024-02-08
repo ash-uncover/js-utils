@@ -1,6 +1,7 @@
-import { StringUtils } from '../../src'
+import { StringUtils } from '.'
 
 describe('StringUtils', () => {
+
   describe('capitalize', () => {
     test('With a lower case word', () => {
       expect(StringUtils.capitalize('test')).toEqual('Test')
@@ -54,6 +55,17 @@ describe('StringUtils', () => {
       const expected = 'bonjour stroumph ca stroumph bien'
 
       expect(result).toEqual(expected)
+    })
+  })
+
+  describe('getIndent', () => {
+
+    test('With default char', () => {
+      expect(StringUtils.getIndent(1)).toEqual('  ')
+    })
+
+    test('With custom char', () => {
+      expect(StringUtils.getIndent(2, '*')).toEqual('**')
     })
   })
 })

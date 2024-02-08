@@ -1,4 +1,4 @@
-import { DateUtils } from '../../src'
+import { DateUtils } from '.'
 
 describe('DateUtils', () => {
   describe('durationToHumanTime', () => {

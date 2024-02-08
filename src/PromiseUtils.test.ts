@@ -1,5 +1,5 @@
 import { resolve } from 'path'
-import { PromiseUtils } from '../../src'
+import { PromiseUtils } from '.'
 
 describe('PromiseUtils', () => {
   describe('delayedPromise', () => {

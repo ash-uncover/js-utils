@@ -1,4 +1,4 @@
-import { UUID } from '../../src'
+import { UUID } from '.'
 
 describe('UUID', () => {
   describe('next', () => {
