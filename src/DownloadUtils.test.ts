@@ -3,9 +3,11 @@ import { DownloadUtils } from '.'
 describe('DownloadUtils', () => {
 
   let spyClick: any
+  let spyRemoveChild: any
 
   beforeEach(() => {
     spyClick = jest.fn()
+    spyRemoveChild = jest.fn()
     Object.defineProperty(document, 'createElement', {
       writable: true,
       value: () => ({
@@ -13,7 +15,18 @@ describe('DownloadUtils', () => {
       })
     })
 
+    Object.defineProperty(document, 'body', {
+      writable: true,
+      value: {
+        removeChild: spyRemoveChild
+      }
+    })
+
     Object.defineProperty(URL, 'createObjectURL', {
+      writable: true,
+      value: jest.fn()
+    })
+    Object.defineProperty(URL, 'revokeObjectURL', {
       writable: true,
       value: jest.fn()
     })
