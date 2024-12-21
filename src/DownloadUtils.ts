@@ -8,7 +8,6 @@ export class DownloadUtils {
     link.target = '_blank'
     link.href = href
     link.click()
-    document.body.removeChild(link)
     URL.revokeObjectURL(href)
   }
 }
