@@ -1,6 +1,6 @@
 export class FileUtils {
 
-  static dumb() {
+  static dumb2() {
     return ''
   }
 

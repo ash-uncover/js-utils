@@ -3,7 +3,7 @@ import { FileUtils } from '.'
 describe('FileUtils', () => {
   describe('dumb', () => {
     test('dumb test', () => {
-      const result = FileUtils.dumb()
+      const result = FileUtils.dumb2()
       const expected = ''
       expect(result).toBe(expected)
     })
