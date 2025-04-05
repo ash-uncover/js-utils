@@ -1,5 +1,6 @@
 # Logs
 npm-debug.log*
+dist
 
 # Coverage directory
 __coverage__
