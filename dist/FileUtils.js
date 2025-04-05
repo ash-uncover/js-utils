@@ -4,7 +4,7 @@ exports.FileUtils = void 0;
 var FileUtils = /** @class */ (function () {
     function FileUtils() {
     }
-    FileUtils.dumb2 = function () {
+    FileUtils.dumb = function () {
         return '';
     };
     FileUtils.getExtension = function (file) {
