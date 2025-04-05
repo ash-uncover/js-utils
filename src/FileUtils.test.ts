@@ -1,6 +1,14 @@
 import { FileUtils } from '.'
 
 describe('FileUtils', () => {
+  describe('dumb', () => {
+    test('dumb test', () => {
+      const result = FileUtils.dumb()
+      const expected = ''
+      expect(result).toBe(expected)
+    })
+  })
+
   describe('getExtension', () => {
     test('properly load a file extention', () => {
       const file = new File([], 'toto.test')
