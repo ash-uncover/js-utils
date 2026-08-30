@@ -1,9 +1,9 @@
 import { GraphLink } from './GraphLink'
 import { GraphNode } from './GraphNode'
 
-export class Graph {
-  private _nodes: GraphNode[] = []
-  private _links: GraphLink[] = []
+export class Graph<N extends GraphNode = GraphNode, L extends GraphLink = GraphLink> {
+  private _nodes: N[] = []
+  private _links: L[] = []
 
   get nodes() {
     return this._nodes
@@ -13,7 +13,7 @@ export class Graph {
     return this._links
   }
 
-  addNode(node: GraphNode) {
+  addNode(node: N) {
     if (!this.hasNode(node.id)) {
       this._nodes.push(node)
     }
@@ -28,11 +28,11 @@ export class Graph {
     return this._nodes.some(n => n.id === id)
   }
 
-  getNode(id: string) {
+  getNode(id: string): N | null {
     return this._nodes.find(n => n.id === id) ?? null
   }
 
-  addLink(link: GraphLink) {
+  addLink(link: L) {
     if (!this.hasLink(link.source, link.target)) {
       this._links.push(link)
     }
@@ -46,10 +46,10 @@ export class Graph {
     return this._links.some(l => l.source === source && l.target === target)
   }
 
-  getNeighbors(id: string) {
+  getNeighbors(id: string): N[] {
     return this._links
       .filter(l => l.source === id)
       .map(l => this.getNode(l.target))
-      .filter((n): n is GraphNode => n !== null)
+      .filter((n): n is N => n !== null)
   }
 }

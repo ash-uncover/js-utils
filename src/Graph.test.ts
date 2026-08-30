@@ -14,6 +14,17 @@ describe('Graph', () => {
       expect(result.nodes).toEqual([])
       expect(result.links).toEqual([])
     })
+
+    test('accepts specific node and link types as type parameters', () => {
+      // Declaration
+      class MyNode extends GraphNode {}
+      class MyLink extends GraphLink {}
+      // Execution
+      const result = new Graph<MyNode, MyLink>()
+      // Assertion
+      expect(result.nodes).toEqual([])
+      expect(result.links).toEqual([])
+    })
   })
 
   // addNode //
