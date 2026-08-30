@@ -1,6 +1,6 @@
 {
   "name": "@sol.ac/js-utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "aSH <ash.uncover@gmail.com>",
   "description": "javascript utils",
   "license": "MIT",
@@ -15,8 +15,8 @@
   ],
   "scripts": {
     "build": "tsc --p tsconfig.build.json",
-    "test": "jest --env=jsdom",
-    "test:coverage": "jest --env=jsdom --collectCoverage",
+    "test": "jest",
+    "test:coverage": "jest --collectCoverage",
     "prepare": "husky"
   },
   "devDependencies": {

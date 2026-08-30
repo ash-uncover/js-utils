@@ -1,7 +1,0 @@
-src
-test
-
-.babelrc
-.prettierrc
-tsconfig.json
-tslint.json
