@@ -34,3 +34,5 @@ npm install @sol.ac/js-utils
 ## License
 
 MIT
+
+-aSH
