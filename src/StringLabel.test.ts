@@ -4,7 +4,7 @@ import { StringLabel } from '.'
 
 describe('StringLabel', () => {
 
-  function checkOneWord(label: any) {
+  function checkOneWord(label: StringLabel) {
     expect(label.words).toEqual(['word'])
     expect(label.camel).toEqual('word')
     expect(label.pascal).toEqual('Word')
@@ -12,7 +12,7 @@ describe('StringLabel', () => {
     expect(label.snake).toEqual('Word')
     expect(label.serpent).toEqual('WORD')
   }
-  function checkTwoWords(label: any) {
+  function checkTwoWords(label: StringLabel) {
     expect(label.words).toEqual(['word1','word2'])
     expect(label.camel).toEqual('word1Word2')
     expect(label.pascal).toEqual('Word1Word2')
@@ -20,7 +20,7 @@ describe('StringLabel', () => {
     expect(label.snake).toEqual('Word1_Word2')
     expect(label.serpent).toEqual('WORD1_WORD2')
   }
-  function checkEmpty(label: any) {
+  function checkEmpty(label: StringLabel) {
     expect(label.words).toEqual([])
     expect(label.camel).toEqual('')
     expect(label.pascal).toEqual('')

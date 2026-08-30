@@ -15,6 +15,7 @@
   ],
   "scripts": {
     "build": "tsc --p tsconfig.build.json",
+    "lint": "eslint src",
     "test": "jest",
     "test:coverage": "jest --collectCoverage",
     "prepare": "husky"
@@ -22,10 +23,12 @@
   "devDependencies": {
     "@types/jest": "30.0.0",
     "@types/node": "26.4.0",
+    "eslint": "^10.9.1",
     "husky": "9.1.7",
     "jest": "30.5.0",
     "jest-environment-jsdom": "30.5.0",
     "ts-jest": "29.4.12",
-    "typescript": "5.9.3"
+    "typescript": "5.9.3",
+    "typescript-eslint": "^8.68.0"
   }
 }

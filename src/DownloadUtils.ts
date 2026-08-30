@@ -1,6 +1,6 @@
 export class DownloadUtils {
 
-  static downloadJson(filename: string, content: any) {
+  static downloadJson(filename: string, content: unknown) {
     const blob = new Blob([JSON.stringify(content, null, 2)], { type: 'application/json' })
     const href = URL.createObjectURL(blob)
     const link: HTMLAnchorElement = document.createElement('a')

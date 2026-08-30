@@ -35,7 +35,7 @@ export class ArrayUtils {
     return null
   }
 
-  static removeElement<T>(array: T[], element: any): T[] {
+  static removeElement<T>(array: T[], element: T): T[] {
     const index = array.indexOf(element)
     const result = array.slice()
     if (index !== -1) {

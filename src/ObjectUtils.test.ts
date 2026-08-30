@@ -11,7 +11,7 @@ describe('ObjectUtils', () => {
     })
 
     test('with undefined', () => {
-      const obj: any = {}
+      const obj: Record<string, unknown> = {}
       expect(ObjectUtils.nil(obj.data)).toBe(true)
     })
 
@@ -20,7 +20,6 @@ describe('ObjectUtils', () => {
     })
 
     test('with value', () => {
-      const obj = {}
       expect(ObjectUtils.nil('')).toBe(false)
     })
   })

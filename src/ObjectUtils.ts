@@ -1,13 +1,13 @@
 export class ObjectUtils {
 
-  static nil(object?: any) {
+  static nil(object?: unknown) {
     return typeof object === 'undefined' || object === null
   }
 
-  static getProperty(object: object, path: string) {
-    return path.split('.').reduce((acc: any, element: string) => {
-      if (acc && typeof acc === 'object') {
-        return acc[element]
+  static getProperty(object: object, path: string): unknown {
+    return path.split('.').reduce((acc: unknown, element: string) => {
+      if (acc !== null && typeof acc === 'object') {
+        return (acc as Record<string, unknown>)[element]
       }
       return undefined
     }, object)

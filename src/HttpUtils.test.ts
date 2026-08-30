@@ -7,7 +7,7 @@ import {
 describe('HttpUtils', () => {
   describe('HttpHeader', () => {
     test('check members are defined', () => {
-      for (let header in HttpHeaders) {
+      for (const header in HttpHeaders) {
         expect(header).toBeDefined()
       }
     })
@@ -15,7 +15,7 @@ describe('HttpUtils', () => {
 
   describe('HttpMethod', () => {
     test('check members are defined', () => {
-      for (let method in HttpMethods) {
+      for (const method in HttpMethods) {
         expect(method).toBeDefined()
       }
     })
@@ -23,7 +23,7 @@ describe('HttpUtils', () => {
 
   describe('HttpStatus', () => {
     test('check members are defined', () => {
-      for (let status in HttpStatuses) {
+      for (const status in HttpStatuses) {
         expect(status).toBeDefined()
       }
     })

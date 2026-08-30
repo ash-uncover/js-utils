@@ -11,7 +11,7 @@ describe('ArrayUtils', () => {
       // Execution
       const result = ArrayUtils.createIntArray()
       // Assertion
-      const expected: any[] = []
+      const expected: number[] = []
       expect(result).toEqual(expected)
     })
 
@@ -35,7 +35,7 @@ describe('ArrayUtils', () => {
       // Execution
       const result = ArrayUtils.shuffle()
       // Assertion
-      const expected: any[] = []
+      const expected: unknown[] = []
       expect(result).toEqual(expected)
     })
 
@@ -63,7 +63,7 @@ describe('ArrayUtils', () => {
       // Execution
       const result = ArrayUtils.randomSubArray()
       // Assertion
-      const expected: any[] = []
+      const expected: unknown[] = []
       expect(result).toEqual(expected)
     })
 
@@ -107,12 +107,12 @@ describe('ArrayUtils', () => {
 
     test('when array is emtpy', () => {
       // Declaration
-      const array: any[] = []
+      const array: string[] = []
       const element = 'toto'
       // Execution
       const result = ArrayUtils.removeElement(array, element)
       // Assertion
-      const expected: any[] = []
+      const expected: string[] = []
       expect(result).toEqual(expected)
     })
 

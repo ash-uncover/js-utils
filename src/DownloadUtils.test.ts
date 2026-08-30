@@ -2,8 +2,8 @@ import { DownloadUtils } from '.'
 
 describe('DownloadUtils', () => {
 
-  let spyClick: any
-  let spyRemoveChild: any
+  let spyClick: jest.Mock
+  let spyRemoveChild: jest.Mock
 
   beforeEach(() => {
     spyClick = jest.fn()

@@ -1,7 +1,7 @@
 
 export class Sets {
-  static toSet(array: any[]) {
-    return array.reduce((acc, element) => {
+  static toSet<T>(array: T[]): T[] {
+    return array.reduce((acc: T[], element: T) => {
       if (!acc.includes(element)) {
         acc.push(element)
       }
@@ -9,7 +9,7 @@ export class Sets {
     }, [])
   }
 
-  static add(set: any[], ...elements: any[]) {
+  static add<T>(set: T[], ...elements: T[]): T[] {
     elements.forEach((element) => {
       if (!set.includes(element)) {
         set.push(element)
@@ -18,7 +18,7 @@ export class Sets {
     return set
   }
 
-  static remove(set: any[], ...elements: any[]) {
+  static remove<T>(set: T[], ...elements: T[]): T[] {
     elements.forEach((element) => {
       const index = set.indexOf(element)
       if (index !== -1) {
@@ -28,7 +28,7 @@ export class Sets {
     return set
   }
 
-  static merge(set1: any[], set2: any[]) {
+  static merge<T>(set1: T[], set2: T[]): T[] {
     return Sets.toSet(set1.concat(set2))
   }
 }
